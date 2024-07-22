@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "dd55145f-2eeb-4c58-b626-d3c5d33d1031",
+		"name": "fileshare",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37153735"
+	},
+	"item": [
+		{
+			"name": "ops user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"kamar\",\r\n    \"password\":\"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ops user upload file",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNjcwMzU5LCJpYXQiOjE3MjE2NzAwNTksImp0aSI6ImFhMmVmNThlMzg1YTRmOWVhOGQ1NjIzOWZlZmJiZGVmIiwidXNlcl9pZCI6MX0.PwCE_ZiIP7HVcYhHIOO7vkgFW7T-oBN6zwSulAB1wfc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/resume/anupama.docx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/upload/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client user signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"rahul\",\r\n    \"email\":\"rahul@gmail.com\",\r\n    \"password\":\"Agra@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/signup/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"signup",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client user login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"rahul\",\r\n    \"password\":\"Agra@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/get-token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"get-token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list upload files",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNjcwNjk1LCJpYXQiOjE3MjE2NzAzOTUsImp0aSI6IjMyZGY3MjkzZmEwYjRiMjJhNmVlOTlhNzUwOWI4ZTExIiwidXNlcl9pZCI6Nn0.cSA7lTn-PzF_8b5WC8CRYBFTJKtEBRKS-oSJ7wBD8bo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/files/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"files",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download file by client",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIxNjcwNjk1LCJpYXQiOjE3MjE2NzAzOTUsImp0aSI6IjMyZGY3MjkzZmEwYjRiMjJhNmVlOTlhNzUwOWI4ZTExIiwidXNlcl9pZCI6Nn0.cSA7lTn-PzF_8b5WC8CRYBFTJKtEBRKS-oSJ7wBD8bo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/download/15/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"download",
+						"15",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
